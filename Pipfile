@@ -4,8 +4,15 @@ verify_ssl = true
 name = 'pypi'
 
 [requires]
-python_version = '3.6'
+python_version = '3'
+
+[dev-packages]
+pylint = "*"
+isort = "*"
+black = "*"
+pytest = "*"
 
 [packages]
 
-[dev-packages]
+[scripts]
+entitytool = "python entitytool.py"
