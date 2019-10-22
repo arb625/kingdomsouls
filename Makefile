@@ -1,8 +1,11 @@
 test:
-	pipenv run pytest
+	pipenv run python -m pytest
 
 coverage:
-	pipenv run pytest --cov=kingdomsouls
+	pipenv run python -m pytest --cov=kingdomsouls
+
+coverage-html:
+	pipenv run python -m pytest --cov=kingdomsouls --cov-report=html
 
 mypy:
 	pipenv run mypy kingdomsouls

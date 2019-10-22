@@ -11,6 +11,7 @@
 /bazel-*
 
 .idea
+.DS_Store
 
 ### Code ###
 .vscode/*
