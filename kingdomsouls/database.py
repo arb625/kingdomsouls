@@ -23,11 +23,11 @@ def connect():
     return connect.connection_cache
 
 
-connect.connection_cache = None
+connect.connection_cache = None  # type: ignore
 
 
 def prepare():
-    """Prepare the database (create needed tables, indices, etc.)"""
+    """Prepare the database (create needed tables, indices, etc.)."""
     con = connect()
     with con:
         con.execute(
@@ -44,6 +44,7 @@ def prepare():
 def clear_table(name):
     """
     Clear the data of the specified table. For testing purposes.
+
     :param name: the table to clear
     """
     con = connect()

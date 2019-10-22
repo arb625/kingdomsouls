@@ -7,7 +7,7 @@ coverage:
 coverage-html:
 	pipenv run python -m pytest --cov=kingdomsouls --cov-report=html
 
-mypy:
+type-check:
 	pipenv run mypy kingdomsouls
 
 lint:
