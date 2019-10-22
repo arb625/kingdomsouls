@@ -13,6 +13,10 @@ black = "*"
 pytest = "*"
 
 [packages]
+click = "*"
 
 [scripts]
-entitytool = "python entitytool.py"
+KingdomSouls = "python main.py"
+
+[pipenv]
+allow_prereleases = true

@@ -1,4 +1,4 @@
-# make sure pre-commit hooks are installed: https://pre-commit.com/
+# make sure pre-commit hooks are downloaded and installed: https://pre-commit.com/
 repos:
   - repo: https://github.com/asottile/seed-isort-config
     rev: v1.9.3
