@@ -8,7 +8,7 @@ with open(path.join(this_directory, "README.md"), encoding="utf-8") as f:
 
 setup(
     name="kingdomsouls",
-    version="1.0",
+    version="1.0.0",
     description="Game where you can create, train, and battle with characters.",
     url="https://git.soma.salesforce.com/a-baddam/kingdomsouls",
     author="a-baddam",

@@ -1,3 +1,7 @@
+# KingdomSouls 
+[![Build Status](https://travis-ci.org/arb625/kingdomsouls.svg?branch=master)](https://travis-ci.org/arb625/kingdomsouls)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Game where you can create, train, and battle with characters.
 Inspired by Kingdom Hearts.
 
