@@ -1,10 +1,13 @@
+import sqlite3
+
 import click
 
-import KingdomSouls.database
+import kingdomsouls.database
 
 
 @click.group()
 def character():
+    """Click group for character-related commands"""
     pass
 
 
@@ -24,16 +27,28 @@ def character():
     help="The character's defense",
     default=0,
 )
-def create(name, attack, defense):
-    con = KingdomSouls.database.connect()
+def create(name: str, attack: int, defense: int) -> None:
+    """
+    Create a new character.
+    :param name: the character's name
+    :param attack: the character's attack
+    :param defense: the character's defense
+    """
+    con = kingdomsouls.database.connect()
     with con:
-        con.execute(
-            """
-            INSERT INTO characters (name, attack, defense) 
-            VALUES (?, ?, ?)
-        """,
-            (name, attack, defense),
-        )
+        try:
+            con.execute(
+                """
+                INSERT INTO characters (name, attack, defense)
+                VALUES (?, ?, ?)
+            """,
+                (name, attack, defense),
+            )
+            click.echo(f"{name} has been created.")
+        except sqlite3.Error as e:
+            click.echo(f"Database error: {e}")
+        except Exception as e:
+            click.echo(f"Exception in _query: {e}")
 
 
 @character.command()
@@ -42,12 +57,16 @@ def create(name, attack, defense):
     prompt="Please enter the name of the character you want to delete",
     help="The character's name",
 )
-def delete(name):
-    con = KingdomSouls.database.connect()
+def delete(name: str) -> None:
+    """
+    Delete a character.
+    :param name: the character's name
+    """
+    con = kingdomsouls.database.connect()
     with con:
         con.execute(
             """
-            DELETE FROM characters 
+            DELETE FROM characters
             WHERE name = ?
         """,
             (name,),
@@ -56,14 +75,18 @@ def delete(name):
 
 @character.command()
 @click.option("--name", prompt="Who are you training?", help="The character's name")
-def train_attack(name):
-    con = KingdomSouls.database.connect()
+def train_attack(name: str) -> None:
+    """
+    Increase a character's attack by 1.
+    :param name: the character's name
+    """
+    con = kingdomsouls.database.connect()
     with con:
         con.execute(
             """
-            UPDATE characters 
+            UPDATE characters
             SET attack = attack + 1
-            WHERE name = ? 
+            WHERE name = ?
         """,
             (name,),
         )
@@ -71,14 +94,18 @@ def train_attack(name):
 
 @character.command()
 @click.option("--name", prompt="Who are you training?", help="The character's name")
-def train_defense(name):
-    con = KingdomSouls.database.connect()
+def train_defense(name: str) -> None:
+    """
+    Increase a character's defense by 1.
+    :param name: the character's name
+    """
+    con = kingdomsouls.database.connect()
     with con:
         con.execute(
             """
-            UPDATE characters 
+            UPDATE characters
             SET defense = defense + 1
-            WHERE name = ? 
+            WHERE name = ?
         """,
             (name,),
         )
@@ -89,13 +116,18 @@ def train_defense(name):
 @click.option(
     "--name2", prompt="Choose the second fighter", help="The character's name"
 )
-def fight(name1, name2):
-    con = KingdomSouls.database.connect()
+def fight(name1: str, name2: str) -> None:
+    """
+    Battle two characters. The character with higher power (attack + defense) wins.
+    :param name1: the name of character 1
+    :param name2: the name of character 2
+    """
+    con = kingdomsouls.database.connect()
     with con:
         p1 = con.execute(
             """
             SELECT attack + defense AS power
-            FROM characters 
+            FROM characters
             WHERE name = ?
         """,
             (name1,),
@@ -103,7 +135,7 @@ def fight(name1, name2):
         p2 = con.execute(
             """
             SELECT attack + defense AS power
-            FROM characters 
+            FROM characters
             WHERE name = ?
         """,
             (name2,),
@@ -117,8 +149,11 @@ def fight(name1, name2):
 
 
 @character.command()
-def show():
-    con = KingdomSouls.database.connect()
+def show() -> None:
+    """
+    Show all character details.
+    """
+    con = kingdomsouls.database.connect()
     with con:
         rows = con.execute(
             """

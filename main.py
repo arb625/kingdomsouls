@@ -1,6 +1,6 @@
-import KingdomSouls.client
-import KingdomSouls.database
+import kingdomsouls.client
+import kingdomsouls.database
 
 if __name__ == "__main__":
-    KingdomSouls.database.prepare()
-    KingdomSouls.client.cli()
+    kingdomsouls.database.prepare()
+    kingdomsouls.client.cli()

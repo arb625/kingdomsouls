@@ -7,16 +7,19 @@ name = 'pypi'
 python_version = '3'
 
 [dev-packages]
-pylint = "*"
+pytest = "*"
+pytest-cov = "*"
+mypy = "*"
 isort = "*"
 black = "*"
-pytest = "*"
+flake8 = "*"
+flake8-docstrings = "*"
 
 [packages]
 click = "*"
 
 [scripts]
-KingdomSouls = "python main.py"
+kingdomsouls = "python main.py"
 
 [pipenv]
 allow_prereleases = true

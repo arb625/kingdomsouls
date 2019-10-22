@@ -1,6 +1,6 @@
 import click
 
-from KingdomSouls.commands.character import character
+from kingdomsouls.commands.character import character
 
 
 @click.group()
