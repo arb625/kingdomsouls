@@ -1,0 +1,15 @@
+language: python
+python:
+  - "3"
+os:
+  - linux
+  - osx
+# command to install dependencies
+install:
+  - pip install pipenv
+  - pipenv install
+# command to run tests
+test_script:
+  - make test
+  - make mypy --exit-zero
+  - make lint --exit-zero
