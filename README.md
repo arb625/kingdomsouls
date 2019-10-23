@@ -1,6 +1,7 @@
 # KingdomSouls 
 [![Build Status](https://travis-ci.org/arb625/kingdomsouls.svg?branch=master)](https://travis-ci.org/arb625/kingdomsouls)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.7](https://img.shields.io/badge/python-3.6%2C3.7-blue)](https://www.python.org/downloads/release/python-370/)
 
 Game where you can create, train, and battle with characters.
 Inspired by Kingdom Hearts.

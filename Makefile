@@ -1,10 +1,10 @@
 test:
 	pipenv run python -m pytest
 
-coverage:
+test-coverage:
 	pipenv run python -m pytest --cov=kingdomsouls
 
-coverage-html:
+test-coverage-html:
 	pipenv run python -m pytest --cov=kingdomsouls --cov-report=html
 
 type-check:
