@@ -8,6 +8,6 @@ install:
   - pip install pipenv
   - pipenv install
 script:
-  - make test-coverage
+  - make test
 after_success:
   - pipenv run codecov
