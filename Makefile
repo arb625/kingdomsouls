@@ -12,3 +12,6 @@ type-check:
 
 lint:
 	pipenv run flake8
+
+build_wheel:
+	pipenv run python setup.py bdist_wheel

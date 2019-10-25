@@ -2,6 +2,7 @@
 [![Build Status](https://travis-ci.org/arb625/kingdomsouls.svg?branch=master)](https://travis-ci.org/arb625/kingdomsouls)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.7](https://img.shields.io/badge/python-3.6%2C3.7-blue)](https://www.python.org/downloads/release/python-370/)
+[![codecov](https://codecov.io/gh/arb625/kingdomsouls/branch/master/graph/badge.svg)](https://codecov.io/gh/arb625/kingdomsouls)
 
 Game where you can create, train, and battle with characters.
 Inspired by Kingdom Hearts.
@@ -9,9 +10,7 @@ Inspired by Kingdom Hearts.
 Installation:
 ---
 
-`pip install kingdomsouls`
-
-Or download the latest binary in releases.
+See [releases](https://github.com/arb625/kingdomsouls/releases) for instructions on how to download and install the latest `wheel` using `pip`.
 
 Usage:
 ---
@@ -57,13 +56,14 @@ Notes
 ---
 I'm using this fairly simple project as a way for me to practice writing, testing, and deploying a project in Python.
 The hope is that the boilerplate I set up here will be useful for my future Python projects.
-In that vein and for my own documentation, here are the configuration tools I'm using and what they do.
+In that vein and for my own reference, here are the configuration tools I'm using and what they do.
 
-* pytest: testing 
-* pytest-cov: test coverage
-* docker: testing on multiple platforms
-* travis ci: continuous integration
-* mypy: static type checker
-* isort: organize imports
-* black: python formatter
-* flake8: python linter
+* [pytest](https://github.com/pytest-dev/pytest): testing
+* [pytest-cov](https://pypi.org/project/pytest-cov/): test coverage
+* [setuptools](https://github.com/pypa/setuptools): packaging
+* [docker](https://github.com/docker): testing on multiple platforms
+* [travis ci](https://travis-ci.org/): continuous integration
+* [mypy](https://github.com/python/mypy): static type checker
+* [isort](https://github.com/timothycrosley/isort): organize imports
+* [black](https://github.com/psf/black): python formatter
+* [flake8](https://github.com/PyCQA/flake8): python linter
