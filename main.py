@@ -1,6 +1,4 @@
-import kingdomsouls.client
-import kingdomsouls.database
+import kingdomsouls.main
 
 if __name__ == "__main__":
-    kingdomsouls.database.prepare()
-    kingdomsouls.client.cli()
+    kingdomsouls.main.initialize()

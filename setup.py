@@ -19,6 +19,6 @@ setup(
     tests_require=["pytest"],
     long_description=long_description,
     long_description_content_type="text/markdown",
-    entry_points={"console_scripts": ["kingdomsouls = main:main"]},
+    entry_points={"console_scripts": ["kingdomsouls = kingdomsouls.main:initialize"]},
     install_requires=["click"],
 )
