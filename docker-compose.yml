@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  ubuntu-18.04:
+    build:
+      context: .
+      dockerfile: Dockerfile.18_04
+    volumes:
+      - type: bind
+        source: ./release/
+        target: /kingdomsouls/dist/
+        consistency: delegated
+    environment:
+      - LC_ALL=C.UTF-8
+        LANG=C.UTF-8

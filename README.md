@@ -61,7 +61,7 @@ In that vein and for my own reference, here are the configuration tools I'm usin
 * [pytest](https://github.com/pytest-dev/pytest): testing
 * [pytest-cov](https://pypi.org/project/pytest-cov/): test coverage
 * [setuptools](https://github.com/pypa/setuptools): packaging
-* [docker](https://github.com/docker): testing on multiple platforms
+* [docker](https://github.com/docker): testing and build on multiple platforms (Ubuntu)
 * [travis ci](https://travis-ci.org/): continuous integration
 * [mypy](https://github.com/python/mypy): static type checker
 * [isort](https://github.com/timothycrosley/isort): organize imports

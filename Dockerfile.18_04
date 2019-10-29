@@ -1,0 +1,25 @@
+FROM ubuntu:18.04
+
+# get python
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential python3 curl python3-distutils
+# get pip
+RUN curl -sO https://bootstrap.pypa.io/get-pip.py && python3 get-pip.py
+# get pipenv
+RUN pip install pipenv
+
+# copy files to container
+COPY . /kingdomsouls
+WORKDIR /kingdomsouls
+
+# hack to get Click to work on Linux
+CMD export LC_ALL=C.UTF-8
+CMD export LANG=C.UTF-8
+
+# install dependencies
+CMD pipenv install
+
+# test
+#CMD make test
+
+# build binary wheel
+#CMD make build_wheel
