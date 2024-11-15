@@ -10,7 +10,7 @@ setup(
     name="kingdomsouls",
     version="1.0.0",
     description="Game where you can create, train, and battle with characters.",
-    url="https://git.soma.salesforce.com/a-baddam/kingdomsouls",
+    url="https://github.com/arb625/kingdomsouls.git",
     author="a-baddam",
     author_email="baddamanu@gmail.com",
     packages=["kingdomsouls", "kingdomsouls.commands", "kingdomsouls.tests"],
